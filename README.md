@@ -80,6 +80,7 @@ class OptionSampleText implements Option
         ${DS}provider = ${DS}srvOptions->getProvider(self::getType());
         return ${DS}provider
             ->setItems([])
+            ->setDefault('')
             ->getParamsToArray();
     }
 }

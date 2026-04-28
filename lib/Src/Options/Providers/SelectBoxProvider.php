@@ -1,7 +1,4 @@
 <?php
-
-/** @noinspection ALL */
-
 namespace Base\Module\Src\Options\Providers;
 
 use Base\Module\Src\Options\Interface\OptionProvider;
@@ -11,6 +8,7 @@ use Bitrix\Main\Config\Option;
 class SelectBoxProvider implements OptionProvider
 {
     private array $items = [];
+    private string $default = '';
 
     public function getType(): string
     {
@@ -57,10 +55,17 @@ class SelectBoxProvider implements OptionProvider
         return $this;
     }
 
+    public function setDefault(string $default): self
+    {
+        $this->default = $default;
+        return $this;
+    }
+
     public function getParamsToArray(): array
     {
         return [
             'items' => $this->items,
+            'default' => $this->default,
         ];
     }
 }
