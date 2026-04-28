@@ -1,0 +1,12 @@
+{
+  "name": "liventin/base.module.options.provider.selectbox",
+  "type": "bitrix-d7-module",
+  "description": "SelectBox option provider",
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "require": {
+    "php": ">=8.1",
+    "liventin/base.module": "^1.0.0"
+  }
+}
